@@ -21,21 +21,69 @@ An AI-powered document assistant that allows users to ask questions about PDF fi
 - Tesseract OCR
 - Ollama
 - Qwen 2.5
+## Installation (Windows)
 
-## Installation
+### 1. Install Python
 
-1. Install Python, Ollama, and Tesseract OCR if you need scanned PDF support.
-2. Install the Python dependencies:
+Install Python 3.10 or newer from the [official Python website](https://www.python.org/downloads/).
 
-   `pip install -r requirements.txt`
+During installation, enable **Add Python to PATH**.
 
-3. Download the model:
+### 2. Clone the repository
 
-   `ollama pull qwen2.5:3b`
+Open PowerShell and run:
 
-## Run the Application
+```powershell
+git clone https://github.com/yassine1705/ai-pdf-chatbot.git
+cd ai-pdf-chatbot
+```
 
-`python -m streamlit run app.py`
+### 3. Create a virtual environment
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks activation, you can run the commands below without activating the environment:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m streamlit run app.py
+```
+
+### 4. Install Python dependencies
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+### 5. Install Ollama and the Qwen model
+
+Install [Ollama](https://ollama.com/download), then open PowerShell and run:
+
+```powershell
+ollama pull qwen2.5:3b
+```
+
+Make sure Ollama is running before launching the application.
+
+### 6. Install Tesseract OCR (optional)
+
+Install [Tesseract OCR for Windows](https://github.com/UB-Mannheim/tesseract/wiki).
+
+For scanned PDFs, install the language data you need and ensure the Tesseract executable path matches the path configured in `app.py`.
+
+### 7. Run the application
+
+From the project folder, run:
+
+```powershell
+python -m streamlit run app.py
+```
+
+Streamlit will provide a local address, usually `http://localhost:8501`. Open it in your browser.
+
 
 ## How It Works
 
