@@ -1,0 +1,9 @@
+﻿.venv/
+.venv-new/
+__pycache__/
+*.py[cod]
+.env
+.DS_Store
+.vscode/
+app_backup.py
+app_working_backup.py
